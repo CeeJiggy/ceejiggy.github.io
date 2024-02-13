@@ -51,14 +51,14 @@ body {
 }
 
 .navBar {
-    position: sticky;
+    position: block;
     display: block;
     padding: 5px;
     background-color: rgb(0, 127, 201);
     border-radius: 10px;
     top: 10px;
     color: white;
-    width: -webkit-fill-available;
+    width: 100%;
     left: 0;
     right: 0;
     box-shadow: 0px 0px 9px 0px #0000008f;
