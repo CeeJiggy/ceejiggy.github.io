@@ -7,12 +7,6 @@ const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 checkboxes.forEach((checkbox) => {
     checkbox.addEventListener('change', saveCheckboxStates);
     checkbox.addEventListener('change', dateFinished);
-    // if (checkbox.nextSibling.nodeName === '#text') {
-    //     let textToIndent = checkbox.nextSibling;
-    //     console.log(textToIndent);
-    //     let indent = document.createElement('span');
-    //     textToIndent.innerHTML.append(indent);
-    // }
 });
 
 function saveCheckboxStates() {
