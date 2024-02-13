@@ -11,6 +11,10 @@ p {
 
 ul {
     list-style-type: none;
+    list-style-position: outside;
+    margin-left: 0;
+    padding-left: 2em;
+    text-indent: -1.4em;
 }
 
 input {
@@ -123,4 +127,9 @@ body {
 
 .navbar-toggler:hover {
     box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width);
+}
+
+.indent {
+    display: inline;
+
 }
