@@ -9,6 +9,14 @@ p {
     border: white solid;
 }
 
+ul {
+    list-style-type: none;
+}
+
+input {
+    margin-right: 10px;
+}
+
 nav ul {
     background-color: rgb(0, 127, 201);
     padding-inline-start: 0;
@@ -22,6 +30,10 @@ nav ul li {
     background-color: rgb(0, 127, 201);
     display: inline;
 
+}
+
+.nav-link {
+    color: white;
 }
 
 a {
@@ -50,17 +62,18 @@ body {
     color: white;
 }
 
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+
 .navBar {
     display: block;
     padding: 5px;
     background-color: rgb(0, 127, 201);
-    border-radius: 10px;
-    top: 10px;
     color: white;
-    width: 100%;
-    left: 0;
-    right: 0;
-    box-shadow: 0px 0px 9px 0px #0000008f;
     border: white solid;
 
 }
@@ -74,10 +87,8 @@ body {
     border-bottom-right-radius: 5px;
     border-top-left-radius: 10px;
     border-top-right-radius: 30px;
-    height: 45px;
     border: rgb(0, 127, 201) solid;
     box-shadow: 0px 2px 11px 1px black;
-    font-size: auto;
 }
 
 #reload {
@@ -100,4 +111,16 @@ body {
     font-family: "Oxygen", sans-serif;
     font-weight: 700;
     font-style: normal;
+}
+
+.navbar-toggler {
+    margin: 5px 0px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler:hover {
+    box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width);
 }
