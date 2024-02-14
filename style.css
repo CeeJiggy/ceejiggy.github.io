@@ -21,13 +21,14 @@ input {
     margin-right: .65rem;
 }
 
-nav ul {
+.baredit {
     background-color: rgb(0, 127, 201);
-    padding-inline-start: 0;
+    padding: 0px;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-evenly;
+    text-indent: 0;
 }
 
 nav ul li {
@@ -154,4 +155,8 @@ label {
     font-size: 24px;
     line-height: 1.33;
     border: .2em solid white;
+}
+
+.collapsing {
+    overflow-x: visible;
 }
