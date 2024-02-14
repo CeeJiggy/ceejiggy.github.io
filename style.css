@@ -120,6 +120,7 @@ body {
 
 .navbar-toggler {
     margin: 5px 0px;
+    color: white;
 }
 
 .navbar-toggler:focus {
