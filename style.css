@@ -132,6 +132,12 @@ body {
 
 label {
     display: inline;
+    transition-duration: 0.1s;
+}
+
+label:hover {
+    text-shadow: 3px 3px 4px #00c5ff;
+    transition-duration: 0.1s;
 }
 
 .content {
@@ -159,4 +165,19 @@ label {
 
 .collapsing {
     overflow-x: visible;
+}
+
+.form-check-input {
+    transition-duration: 0.1s;
+}
+
+.form-check-input:focus {
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+.form-check-input:hover {
+    transition-duration: 0.1s;
+    box-shadow: 0px 0px 4px 4px #00c5ff;
 }
