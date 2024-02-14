@@ -175,3 +175,7 @@ svg {
 .title {
     text-shadow: 4px 4px 4px black;
 }
+
+.bi-trophy-fill {
+    color: rgb(255, 217, 0);
+}
