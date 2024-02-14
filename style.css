@@ -43,6 +43,11 @@ nav ul li {
     text-shadow: 2px 2px 5px black;
 }
 
+.nav-link:hover {
+    color: aqua;
+    text-shadow: 2px 2px 5px black;
+}
+
 a {
     color: rgb(0, 140, 255);
     text-decoration: none;
