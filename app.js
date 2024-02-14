@@ -2,6 +2,7 @@ const events = document.querySelectorAll('li');
 const labels = document.querySelectorAll('label');
 
 const datesArray = [];
+const collapsables = [];
 const labelArray = Array.from(labels);
 
 
@@ -44,12 +45,15 @@ function buildDatesArray() {
                 if (checkbox.nextElementSibling.childNodes[0] !== undefined) {
                     if (checkbox.nextElementSibling.childNodes[0].localName === 'strong') {
                         datesArray.push(checkbox);
+                        collapsables.push(checkbox.parentNode.nextElementSibling);
+
                     }
                 }
             }
         }
     })
 }
+
 
 function loadCheckboxStates() {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
@@ -90,3 +94,5 @@ function backToTop() {
 document.addEventListener('DOMContentLoaded', loadCheckboxStates);
 document.addEventListener('DOMContentLoaded', buildDatesArray);
 document.addEventListener('DOMContentLoaded', dateFinished);
+
+

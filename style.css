@@ -132,3 +132,7 @@ body {
 label {
     display: inline;
 }
+
+.content {
+    overflow: hidden;
+}
