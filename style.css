@@ -42,7 +42,7 @@ nav ul li {
 }
 
 a {
-    color: white;
+    color: rgb(0, 140, 255);
     text-decoration: none;
     transition-duration: 0.2s;
 }
