@@ -29,7 +29,7 @@ function dateFinished() {
             checkbox.parentNode.nextElementSibling.style.height = '0px';
         }
         else {
-            checkbox.parentNode.style.backgroundColor = 'rgb(0, 84, 209)';
+            checkbox.parentNode.style.backgroundColor = 'rgb(0, 127, 201)';
             checkbox.parentNode.nextElementSibling.style.visibility = 'visible';
             checkbox.parentNode.nextElementSibling.style.height = 'auto';
         }
