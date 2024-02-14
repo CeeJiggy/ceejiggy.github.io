@@ -1,7 +1,10 @@
-const dates = document.querySelectorAll('p');
 const events = document.querySelectorAll('li');
+const labels = document.querySelectorAll('label');
 
-const datesArray = Array.from(dates);
+const datesArray = [];
+const labelArray = Array.from(labels);
+
+
 
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 checkboxes.forEach((checkbox) => {
@@ -16,28 +19,36 @@ function saveCheckboxStates() {
     });
 }
 
-
-
-
 function dateFinished() {
+    const checkboxes = datesArray;
+    checkboxes.forEach((checkbox) => {
+        if (checkbox.checked) {
+            checkbox.parentNode.style.backgroundColor = 'black';
+            checkbox.parentNode.nextElementSibling.style.visibility = 'hidden';
+            checkbox.parentNode.nextElementSibling.style.height = '0px';
+        }
+        else {
+            checkbox.parentNode.style.backgroundColor = 'rgb(0, 84, 209)';
+            checkbox.parentNode.nextElementSibling.style.visibility = 'visible';
+            checkbox.parentNode.nextElementSibling.style.height = 'auto';
+        }
+    })
+}
+
+
+function buildDatesArray() {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     checkboxes.forEach((checkbox) => {
-        if (checkbox.nextElementSibling != null) {
-            if (checkbox.nextElementSibling.localName === 'strong') {
-                if (checkbox.checked) {
-                    checkbox.parentNode.style.backgroundColor = 'black';
-                    checkbox.parentNode.nextElementSibling.style.visibility = 'hidden';
-                    checkbox.parentNode.nextElementSibling.style.height = '0px';
-                }
-                else {
-                    checkbox.parentNode.style.backgroundColor = 'rgb(0, 84, 209)';
-                    checkbox.parentNode.nextElementSibling.style.visibility = 'visible';
-                    checkbox.parentNode.nextElementSibling.style.height = 'auto';
+        if (checkbox.nextElementSibling !== null) {
+            if (checkbox.nextElementSibling.childNodes[0] !== null) {
+                if (checkbox.nextElementSibling.childNodes[0] !== undefined) {
+                    if (checkbox.nextElementSibling.childNodes[0].localName === 'strong') {
+                        datesArray.push(checkbox);
+                    }
                 }
             }
         }
     })
-
 }
 
 function loadCheckboxStates() {
@@ -77,4 +88,5 @@ function backToTop() {
 }
 
 document.addEventListener('DOMContentLoaded', loadCheckboxStates);
+document.addEventListener('DOMContentLoaded', buildDatesArray);
 document.addEventListener('DOMContentLoaded', dateFinished);

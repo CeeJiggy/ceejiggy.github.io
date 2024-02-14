@@ -129,7 +129,6 @@ body {
     box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width);
 }
 
-.indent {
+label {
     display: inline;
-
 }
