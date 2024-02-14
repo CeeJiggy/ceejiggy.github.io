@@ -13,12 +13,12 @@ ul {
     list-style-type: none;
     list-style-position: outside;
     margin-left: 0;
-    padding-left: 2em;
-    text-indent: -1.41em;
+    padding-left: 2rem;
+    text-indent: -1.65rem;
 }
 
 input {
-    margin-right: 10px;
+    margin-right: .65rem;
 }
 
 nav ul {
