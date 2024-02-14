@@ -135,11 +135,6 @@ label {
     transition-duration: 0.1s;
 }
 
-label:hover {
-    text-shadow: 3px 3px 4px #00c5ff;
-    transition-duration: 0.1s;
-}
-
 .content {
     overflow: hidden;
 }
@@ -161,10 +156,6 @@ label:hover {
     font-size: 24px;
     line-height: 1.33;
     border: .2em solid white;
-}
-
-.collapsing {
-    overflow-x: visible;
 }
 
 .form-check-input {
