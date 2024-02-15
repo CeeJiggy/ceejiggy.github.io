@@ -22,19 +22,56 @@ function saveCheckboxStates() {
 
 function dateFinished() {
     const checkboxes = datesArray;
-    checkboxes.forEach((checkbox) => {
-        if (checkbox.checked) {
-            checkbox.parentNode.style.backgroundColor = 'black';
-            checkbox.parentNode.nextElementSibling.style.visibility = 'hidden';
-            checkbox.parentNode.nextElementSibling.style.height = '0px';
+    for (let i = 0; i < checkboxes.length; i++) {
+        let currentCheck = checkboxes[i];
+        if (currentCheck.checked) {
+            currentCheck.parentNode.style.backgroundColor = 'black';
+            currentCheck.parentNode.nextElementSibling.style.visibility = 'hidden';
+            currentCheck.parentNode.nextElementSibling.style.height = '0px';
+            currentCheck.parentNode.classList.remove('currentDate');
+            if (!checkboxes[i + 1].checked) {
+                let newCurrentDate = checkboxes[i + 1];
+                for (let j = 0; j < checkboxes.length; j++) {
+                    if (checkboxes[j] === currentCheck) {
+                        continue;
+                    }
+                    if (checkboxes[j].checked) {
+                        checkboxes[j].parentNode.style.backgroundColor = 'black';
+                    }
+                    else {
+                        checkboxes[j].parentNode.style.backgroundColor = 'rgb(0, 127, 201)';
+                    }
+                    checkboxes[j].parentNode.classList.remove('currentDate');
+
+
+                }
+                checkboxes[i + 1].parentNode.classList.add('currentDate');
+            }
+            else {
+                checkboxes[i + 1].parentNode.classList.remove('currentDate');
+            }
         }
+
         else {
-            checkbox.parentNode.style.backgroundColor = 'rgb(0, 127, 201)';
-            checkbox.parentNode.nextElementSibling.style.visibility = 'visible';
-            checkbox.parentNode.nextElementSibling.style.height = 'auto';
+            if (i < checkboxes.length - 1) {
+                if (!checkboxes[i + 1].checked) {
+                    checkboxes[i + 1].parentNode.classList.remove('currentDate');
+                }
+            }
+            if (checkboxes[i].parentNode.classList.contains('currentDate')) {
+                checkboxes[i].parentNode.style.backgroundColor = 'white';
+            }
+            else {
+                checkboxes[i].parentNode.style.backgroundColor = 'rgb(0, 127, 201)';
+            }
+
+            currentCheck.parentNode.nextElementSibling.style.visibility = 'visible';
+            currentCheck.parentNode.nextElementSibling.style.height = 'auto';
+
         }
-    })
+    }
 }
+
 
 
 function buildDatesArray() {
@@ -91,8 +128,36 @@ function backToTop() {
     document.documentElement.scrollTop = 0;
 }
 
+function scrollToCurrentDate() {
+    let currentDate = document.querySelector('.currentDate');
+    if (currentDate !== null) {
+        currentDate.scrollIntoView();
+    }
+}
+
+function reset() {
+    let toReset = confirm("You are about to reset the guide. Would you like to proceed?");
+    if (toReset) {
+        let toResetConfirm = confirm("Are you sure?");
+        if (toResetConfirm) {
+            const checkboxes = Array.from(document.querySelectorAll('input'));
+            for (let i = 0; i < checkboxes.length; i++) {
+                let currentCheck = checkboxes[i];
+                if (currentCheck.checked) {
+                    currentCheck.checked = false;
+                    dateFinished();
+                    saveCheckboxStates();
+                }
+            }
+        }
+    }
+
+}
+
 document.addEventListener('DOMContentLoaded', loadCheckboxStates);
 document.addEventListener('DOMContentLoaded', buildDatesArray);
 document.addEventListener('DOMContentLoaded', dateFinished);
+document.addEventListener('DOMContentLoaded', scrollToCurrentDate);
+
 
 

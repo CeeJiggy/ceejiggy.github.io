@@ -179,3 +179,16 @@ svg {
 .bi-trophy-fill {
     color: rgb(255, 217, 0);
 }
+
+.currentDate {
+    box-shadow: inset 0px 0px 4px 4px #00c5ff;
+    color: rgb(0 138 239);
+}
+
+#reset {
+    color: yellow;
+}
+
+#reset:hover {
+    color: red;
+}
