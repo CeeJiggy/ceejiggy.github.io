@@ -139,11 +139,11 @@ label {
     display: inline;
     transition-duration: 0.1s;
     font-size: 1em;
-    text-size-adjust: none;
 }
 
 .content {
     overflow: hidden;
+    max-height: 99999999px;
 }
 
 .btn-circle {
