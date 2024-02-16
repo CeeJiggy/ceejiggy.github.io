@@ -144,7 +144,6 @@ label {
 .content {
     overflow: hidden;
     max-height: 99999999px;
-    max-width: 99999999px;
 }
 
 .btn-circle {
