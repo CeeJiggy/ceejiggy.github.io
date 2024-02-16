@@ -41,10 +41,18 @@ nav ul li {
 .nav-link {
     color: white;
     text-shadow: 2px 2px 5px black;
+    padding: 0.2em 0.2em;
+
+}
+
+.nav-link:focus {
+    color: white;
+    text-shadow: 2px 2px 5px black;
+
 }
 
 .nav-link:hover {
-    color: aqua;
+    color: white;
     text-shadow: 2px 2px 5px black;
 }
 
@@ -189,9 +197,7 @@ svg {
     color: yellow;
 }
 
-#reset:hover {
-    color: red;
-}
+
 
 h2 {
     font-size: medium;
@@ -204,4 +210,21 @@ section p {
 
 section {
     margin-bottom: 2em;
+}
+
+.navButton {
+    border: white solid 0.2em;
+    margin: 0.2em 0.2em;
+}
+
+.navButton:hover {
+    border: aqua solid 0.2em;
+}
+
+.reset:hover {
+    border-color: yellow;
+}
+
+.btn-primary {
+    background-color: #008aef;
 }
