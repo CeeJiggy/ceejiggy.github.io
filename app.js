@@ -70,6 +70,15 @@ function dateFinished() {
 
         }
     }
+    setDefaultCurrentDate();
+}
+
+function setDefaultCurrentDate() {
+    let dateCheck = document.querySelectorAll('.currentDate');
+    if (dateCheck.length === 0) {
+        datesArray[0].parentNode.classList.add('currentDate');
+        datesArray[0].parentNode.style.backgroundColor = 'rgb(121 235 255)';
+    }
 }
 
 
@@ -89,6 +98,8 @@ function buildDatesArray() {
             }
         }
     })
+    setDefaultCurrentDate();
+    dateFinished();
 }
 
 
@@ -131,7 +142,9 @@ function backToTop() {
 function scrollToCurrentDate() {
     let currentDate = document.querySelector('.currentDate');
     if (currentDate !== null) {
-        currentDate.scrollIntoView();
+        if (currentDate !== datesArray[0].parentNode) {
+            currentDate.scrollIntoView();
+        }
     }
 }
 
@@ -154,10 +167,36 @@ function reset() {
 
 }
 
+function loadScreen() {
+
+    JsLoadingOverlay.show({
+        'overlayBackgroundColor': 'rgb(43,43,43)',
+        'overlayOpacity': 1,
+        'spinnerIcon': 'ball-clip-rotate',
+        'spinnerColor': '#00c5ff',
+        'spinnerSize': '2x',
+        'overlayIDName': 'overlay',
+        'spinnerIDName': 'spinner',
+        'spinnerZIndex': 99999,
+        'overlayZIndex': 99998,
+        'lockScroll': true
+    })
+    document.querySelector('.contents').style.display = 'block';
+    const loadTimer = setTimeout(hideLoad, 1000);
+}
+
+function hideLoad() {
+    JsLoadingOverlay.hide();
+    scrollToCurrentDate();
+}
+
+document.addEventListener('DOMContentLoaded', loadScreen);
 document.addEventListener('DOMContentLoaded', loadCheckboxStates);
 document.addEventListener('DOMContentLoaded', buildDatesArray);
-document.addEventListener('DOMContentLoaded', dateFinished);
-document.addEventListener('DOMContentLoaded', scrollToCurrentDate);
+
+
+
+
 
 
 
