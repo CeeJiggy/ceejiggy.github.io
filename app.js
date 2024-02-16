@@ -153,7 +153,7 @@ function scrollToCurrentDate() {
     let currentDate = document.querySelector('.currentDate');
     if (currentDate !== null) {
         if (currentDate !== datesArray[0].parentNode) {
-            scrollIntoViewWithOffset(currentDate, 0)
+            scrollIntoViewWithOffset(currentDate, 10)
         }
     }
 }
