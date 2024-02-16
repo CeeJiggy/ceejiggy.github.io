@@ -192,7 +192,7 @@ function loadScreen() {
         'lockScroll': true
     })
     document.querySelector('.contents').style.display = 'block';
-    const loadTimer = setTimeout(hideLoad, 0);
+    const loadTimer = setTimeout(hideLoad, 10);
 }
 
 function hideLoad() {
@@ -203,6 +203,7 @@ function hideLoad() {
 document.addEventListener('DOMContentLoaded', loadScreen);
 document.addEventListener('DOMContentLoaded', loadCheckboxStates);
 document.addEventListener('DOMContentLoaded', buildDatesArray);
+document.addEventListener('DOMContentLoaded', scrollFunction);
 
 
 
