@@ -59,7 +59,7 @@ function dateFinished() {
                 }
             }
             if (checkboxes[i].parentNode.classList.contains('currentDate')) {
-                checkboxes[i].parentNode.style.backgroundColor = 'white';
+                checkboxes[i].parentNode.style.backgroundColor = 'rgb(121 235 255)';
             }
             else {
                 checkboxes[i].parentNode.style.backgroundColor = 'rgb(0, 127, 201)';
