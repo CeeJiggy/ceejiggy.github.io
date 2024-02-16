@@ -139,11 +139,21 @@ function backToTop() {
     document.documentElement.scrollTop = 0;
 }
 
+const scrollIntoViewWithOffset = (selector, offset) => {
+    window.scrollTo({
+        behavior: 'smooth',
+        top:
+            selector.getBoundingClientRect().top -
+            document.body.getBoundingClientRect().top -
+            offset,
+    })
+}
+
 function scrollToCurrentDate() {
     let currentDate = document.querySelector('.currentDate');
     if (currentDate !== null) {
         if (currentDate !== datesArray[0].parentNode) {
-            currentDate.scrollIntoView();
+            scrollIntoViewWithOffset(currentDate, 10)
         }
     }
 }
@@ -182,7 +192,7 @@ function loadScreen() {
         'lockScroll': true
     })
     document.querySelector('.contents').style.display = 'block';
-    const loadTimer = setTimeout(hideLoad, 1000);
+    const loadTimer = setTimeout(hideLoad, 10);
 }
 
 function hideLoad() {
