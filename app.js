@@ -172,6 +172,7 @@ function reset() {
                     saveCheckboxStates();
                 }
             }
+            let finished = alert("The guide has been reset.");
         }
     }
 

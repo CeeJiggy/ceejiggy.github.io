@@ -248,3 +248,10 @@ section {
     border-color: #0a53be;
     transition-duration: 0.2s;
 }
+
+.monthTop {
+    display: block;
+    position: relative;
+    top: -1em;
+    visibility: hidden;
+}
