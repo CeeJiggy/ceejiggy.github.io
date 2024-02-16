@@ -95,7 +95,7 @@ body {
     background-color: rgb(0, 127, 201);
     color: white;
     border: white solid;
-
+    --bs-navbar-toggler-transition: 0.2s;
 }
 
 .month {
@@ -122,6 +122,7 @@ body {
     margin: 5px 0px;
     color: white;
     background-color: rgb(0 138 239);
+    transition-duration: 0.2;
 }
 
 .navbar-toggler:focus {
@@ -227,4 +228,21 @@ section {
 
 .btn-primary {
     background-color: #008aef;
+}
+
+.menuButton {
+    border: white solid 0.15em;
+}
+
+.menuButton:hover {
+    box-shadow: none;
+    border-color: aqua;
+    background-color: #0b5ed7;
+}
+
+.menuButton:active {
+    box-shadow: none;
+    background-color: #0a58ca;
+    border-color: #0a53be;
+    transition-duration: 0.2s;
 }
