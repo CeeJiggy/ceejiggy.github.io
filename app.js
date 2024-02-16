@@ -192,7 +192,7 @@ function loadScreen() {
         'lockScroll': true
     })
     document.querySelector('.contents').style.display = 'block';
-    const loadTimer = setTimeout(hideLoad, 10);
+    const loadTimer = setTimeout(hideLoad, 0);
 }
 
 function hideLoad() {
