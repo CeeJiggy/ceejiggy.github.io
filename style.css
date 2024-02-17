@@ -298,3 +298,8 @@ section {
     border-bottom-right-radius: 1em;
     overflow: hidden;
 }
+
+.ponrWarning {
+    text-indent: 0;
+    padding-left: 2em;
+}
