@@ -285,6 +285,14 @@ section {
     padding: 0.5em 0;
 }
 
+#marchMonth {
+    margin-top: 10px;
+}
+
+#january31 {
+    padding-bottom: 0px;
+}
+
 .arcanaName {
     background-color: #007fc9;
     border-top-left-radius: 1em;
