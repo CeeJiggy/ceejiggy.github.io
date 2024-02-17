@@ -257,3 +257,44 @@ section {
     top: -1em;
     visibility: hidden;
 }
+
+.arcanaNeeded {}
+
+.arcanaHeader {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: white;
+    text-shadow: 0.08em 0.08em rgb(0 138 239);
+}
+
+.arcanaRow {}
+
+.arcana {
+    border-radius: 1em;
+    display: inline;
+    text-align: center;
+    width: 100%;
+    text-indent: 0;
+    background-color: white;
+    box-shadow: 0 0 0 0.15em white;
+    padding: 0;
+}
+
+.arcanaContainer {
+
+    padding: 0.5em 0;
+}
+
+.arcanaName {
+    background-color: #007fc9;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    overflow: hidden;
+}
+
+.arcanaDate {
+    background-color: rgb(43, 43, 43);
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    overflow: hidden;
+}
