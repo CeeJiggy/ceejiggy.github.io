@@ -122,7 +122,8 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-    if (checkAgent == true) {
+    let agentCheck = checkAgent();
+    if (agentCheck == true) {
         if (
             document.body.scrollTop > 200 ||
             document.documentElement.scrollTop > 200
