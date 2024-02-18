@@ -209,20 +209,10 @@ function hideLoad() {
 
 
 function checkAgent() {
+    const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
     let agentString = document.querySelector('.agent');
-    if (navigator.userAgent.match(/Android/i)
-        || navigator.userAgent.match(/webOS/i)
-        || navigator.userAgent.match(/iPhone/i)
-        || navigator.userAgent.match(/iPad/i)
-        || navigator.userAgent.match(/iPod/i)
-        || navigator.userAgent.match(/BlackBerry/i)
-        || navigator.userAgent.match(/Windows Phone/i)) {
-        agentString.innerHTML = "On Mobile!";
-        return true;
-    } else {
-        agentString.innerHTML = "Not on Mobile!";
-        return false;
-    }
+    agentString.innerHTML = navigator.userAgent;
+    return regex.test(navigator.userAgent);
 }
 
 
