@@ -209,8 +209,6 @@ function hideLoad() {
 
 
 function checkAgent() {
-    let agentString = document.querySelector('.agent');
-    agentString.innerHTML = navigator.userAgent;
     if (navigator.userAgent.match(/Android/i)
         || navigator.userAgent.match(/webOS/i)
         || navigator.userAgent.match(/iPhone/i)
