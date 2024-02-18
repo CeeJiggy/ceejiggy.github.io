@@ -122,21 +122,15 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-    let agentCheck = checkAgent();
-    if (agentCheck == false) {
-        if (
-            document.body.scrollTop > 200 ||
-            document.documentElement.scrollTop > 200
-        ) {
-            mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
-        }
-    }
-    else {
-        mybutton.style.display = 'none';
-    }
 
+    if (
+        document.body.scrollTop > 200 ||
+        document.documentElement.scrollTop > 200
+    ) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
 }
 // When the user clicks on the button, scroll to the top of the document
 mybutton.addEventListener("click", backToTop);
@@ -209,17 +203,10 @@ function hideLoad() {
 }
 
 
-function checkAgent() {
-    const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
-    return regex.test(navigator.userAgent);
-}
-
-
 
 
 
 document.addEventListener('DOMContentLoaded', loadScreen);
-document.addEventListener('DOMContentLoaded', checkAgent);
 document.addEventListener('DOMContentLoaded', loadCheckboxStates);
 document.addEventListener('DOMContentLoaded', buildDatesArray);
 document.addEventListener('DOMContentLoaded', scrollFunction);
