@@ -312,3 +312,27 @@ section {
     text-indent: 0;
     padding-left: 2em;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 1em;
+    border-radius: 1em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(55, 55, 55);
+    border-radius: 1em;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #007fc9;
+    border-radius: 1em;
+    border: solid white 0.2em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: aqua;
+}
