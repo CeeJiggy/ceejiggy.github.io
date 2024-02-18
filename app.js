@@ -122,13 +122,15 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-    if (
-        document.body.scrollTop > 200 ||
-        document.documentElement.scrollTop > 200
-    ) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
+    if (checkAgent) {
+        if (
+            document.body.scrollTop > 200 ||
+            document.documentElement.scrollTop > 200
+        ) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
     }
 }
 // When the user clicks on the button, scroll to the top of the document
@@ -201,7 +203,27 @@ function hideLoad() {
     scrollToCurrentDate();
 }
 
+
+function checkAgent() {
+    if (navigator.userAgent.match(/Android/i)
+        || navigator.userAgent.match(/webOS/i)
+        || navigator.userAgent.match(/iPhone/i)
+        || navigator.userAgent.match(/iPad/i)
+        || navigator.userAgent.match(/iPod/i)
+        || navigator.userAgent.match(/BlackBerry/i)
+        || navigator.userAgent.match(/Windows Phone/i)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', loadScreen);
+document.addEventListener('DOMContentLoaded', checkAgent);
 document.addEventListener('DOMContentLoaded', loadCheckboxStates);
 document.addEventListener('DOMContentLoaded', buildDatesArray);
 document.addEventListener('DOMContentLoaded', scrollFunction);
