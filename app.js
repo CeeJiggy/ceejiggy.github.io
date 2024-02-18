@@ -210,8 +210,9 @@ function hideLoad() {
 
 function checkAgent() {
     const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+    let test = regex.test(navigator.userAgent);
     let agentString = document.querySelector('.agent');
-    agentString.innerHTML = navigator.userAgent;
+    agentString.innerHTML = navigator.userAgent + test;
     return regex.test(navigator.userAgent);
 }
 
