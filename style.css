@@ -79,7 +79,7 @@ ul {
 
 body {
     margin: auto;
-    padding: 1em;
+    padding: 3em;
     background-color: rgb(43, 43, 43);
     width: 100%;
     font-family: Outfit, sans-serif;
@@ -91,6 +91,7 @@ body {
     bottom: 10px;
     right: 10px;
     display: none;
+    background-color: rgb(0 138 239)
 }
 
 .navBar {
@@ -158,12 +159,12 @@ label {
 }
 
 .btn-circle.btn-xl {
-    width: 2em;
-    height: 2em;
+    width: 1.75em;
+    height: 1.75em;
     border-radius: 35px;
     font-size: 24px;
     line-height: 1.33;
-    border: .2em solid white;
+    border: .1em solid rgba(255, 255, 255);
 }
 
 .form-check-input {
@@ -259,16 +260,12 @@ section {
     visibility: hidden;
 }
 
-.arcanaNeeded {}
-
 .arcanaHeader {
     padding-top: 1em;
     padding-bottom: 1em;
     color: white;
     text-shadow: 0.08em 0.08em rgb(0 138 239);
 }
-
-.arcanaRow {}
 
 .arcana {
     border-radius: 1em;
@@ -335,14 +332,4 @@ section {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background-color: aqua;
-}
-
-.scrollButton {
-    display: none;
-}
-
-@media (min-width: 850px) {
-    .scrollButton {
-        display: block;
-    }
 }
