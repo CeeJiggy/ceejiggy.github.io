@@ -202,7 +202,11 @@ function hideLoad() {
     scrollToCurrentDate();
 }
 
-
+document.addEventListener('mousedown', function (event) {
+    if (event.detail > 1) {
+        event.preventDefault();
+    }
+}, false);
 
 
 
